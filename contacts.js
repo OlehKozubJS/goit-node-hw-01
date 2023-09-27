@@ -14,7 +14,7 @@ const { readFile, writeFile } = fs;
 // TODO: задокументувати кожну функцію
 function listContacts() {
   // ...твій код. Повертає масив контактів.
-  const data = fs.readFile("");
+  const data = fs.readFile(contactPath);
 }
 
 function getContactById(contactId) {
