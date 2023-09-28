@@ -1,7 +1,4 @@
-const fs = require("fs/promises");
-const path = require("path");
 const contacts = require("./contacts");
-const argv = require("yargs").argv;
 
 invokeAction(argv);
 const { Command } = require("commander");
