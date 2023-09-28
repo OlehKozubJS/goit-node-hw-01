@@ -1,6 +1,6 @@
 const fs = require("fs/promises");
 const path = require("path");
-// index.js
+const contacts = require("./contacts");
 const argv = require("yargs").argv;
 
 invokeAction(argv);
