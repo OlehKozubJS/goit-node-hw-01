@@ -26,7 +26,7 @@ async function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "get":
-      // ... id
+      const contact = find();
       break;
 
     case "add":
