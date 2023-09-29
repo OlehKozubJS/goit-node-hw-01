@@ -12,9 +12,9 @@ const { readFile, writeFile } = fs;
  */
 
 // TODO: задокументувати кожну функцію
-function listContacts() {
+async function listContacts() {
   // ...твій код. Повертає масив контактів.
-  const data = fs.readFile(contactPath);
+  const data = await fs.readFile(contactPath);
   return JSON.parse(data);
 }
 
