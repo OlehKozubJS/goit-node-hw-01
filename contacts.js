@@ -1,15 +1,9 @@
 const fs = require("fs/promises");
 const path = require("path");
 
-const contactPath = require("./db/contacts.json");
-
 const { readFile, writeFile } = fs;
-// contacts.js
 
-/*
- * Розкоментуй і запиши значення
- * const contactsPath = ;
- */
+const contactsPath = path.resolve("db", "contacts.json");
 
 // TODO: задокументувати кожну функцію
 async function listContacts() {
