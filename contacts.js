@@ -7,7 +7,6 @@ const contactsPath = path.resolve("db", "contacts.json");
 
 // TODO: задокументувати кожну функцію
 async function listContacts() {
-  // ...твій код. Повертає масив контактів.
   const data = await fs.readFile(contactPath);
   return JSON.parse(data);
 }
