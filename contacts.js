@@ -6,7 +6,7 @@ const { readFile, writeFile } = fs;
 const contactsPath = path.resolve("db", "contacts.json");
 
 async function listContacts() {
-  const data = await fs.readFile(contactPath);
+  const data = await fs.readFile(contactsPath);
   return JSON.parse(data);
 }
 
