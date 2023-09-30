@@ -5,7 +5,6 @@ const { readFile, writeFile } = fs;
 
 const contactsPath = path.resolve("db", "contacts.json");
 
-// TODO: задокументувати кожну функцію
 async function listContacts() {
   const data = await fs.readFile(contactPath);
   return JSON.parse(data);
