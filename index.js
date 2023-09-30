@@ -17,12 +17,10 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "list":
       const contactList = await contacts.listContacts();
       return console.log(contactList);
-      break;
 
     case "get":
       const contact = contacts.getContactById(id);
       return console.log(contact);
-      break;
 
     case "add":
       // ... name email phone
