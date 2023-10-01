@@ -13,7 +13,6 @@ const argv = program.opts();
 
 const contacts = require("./contacts");
 
-// TODO: рефакторити
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
