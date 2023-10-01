@@ -5,10 +5,12 @@ const { readFile, writeFile } = fs;
 
 const contactsPath = path.resolve("db", "contacts.json");
 
-async function listContacts() {
+const listContacts = async () => {
   const data = await readFile(contactsPath);
   return JSON.parse(data);
-}
+};
+
+module.exports = { listContacts };
 /*
 function getContactById(contactId) {
   // ...твій код. Повертає об'єкт контакту з таким id. Повертає null, якщо контакт з таким id не знайдений.
