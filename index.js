@@ -18,11 +18,11 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "list":
       const contactList = await listContacts();
       return console.log(contactList);
-    /*
-    case "get":
-      const contact = contacts.getContactById(id);
-      return console.log(contact);
 
+    case "get":
+      const contact = getContactById(id);
+      return console.log(contact);
+    /*
     case "add":
       // ... name email phone
       break;
