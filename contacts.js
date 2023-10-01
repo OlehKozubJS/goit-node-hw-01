@@ -9,7 +9,7 @@ async function listContacts() {
   const data = await fs.readFile(contactsPath);
   return JSON.parse(data);
 }
-
+/*
 function getContactById(contactId) {
   // ...твій код. Повертає об'єкт контакту з таким id. Повертає null, якщо контакт з таким id не знайдений.
 }
@@ -21,3 +21,4 @@ function removeContact(contactId) {
 function addContact(name, email, phone) {
   // ...твій код. Повертає об'єкт доданого контакту.
 }
+*/
