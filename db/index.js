@@ -10,4 +10,9 @@ const listContacts = async () => {
   return JSON.parse(data);
 };
 
+const getContactById = async (id) => {
+  const contacts = await listContacts();
+  return contacts.find((contact) => contact.id === id);
+};
+
 module.exports = { listContacts };
