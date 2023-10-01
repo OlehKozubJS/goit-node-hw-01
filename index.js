@@ -1,4 +1,3 @@
-/*
 const { Command } = require("commander");
 const program = new Command();
 program
@@ -11,7 +10,7 @@ program
 program.parse(process.argv);
 
 const argv = program.opts();
-*/
+
 const { listContacts } = require("./db");
 
 async function invokeAction({ action, id, name, email, phone }) {
@@ -37,4 +36,4 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-invokeAction({ action: "list", id: "AeHIrLTr6JkxGE6SN-0Rw" });
+invokeAction(/*argv*/ { action: "list", id: "AeHIrLTr6JkxGE6SN-0Rw" });
