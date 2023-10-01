@@ -11,7 +11,7 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-const contacts = require("./contacts");
+const { listContacts } = require("./db");
 
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
