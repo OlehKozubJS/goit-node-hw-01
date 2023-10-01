@@ -17,7 +17,7 @@ const { listContacts } = require("./db");
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      const contactList = await contacts.listContacts();
+      const contactList = await listContacts();
       return console.log(contactList);
     /*
     case "get":
