@@ -9,3 +9,5 @@ const listContacts = async () => {
   const data = await readFile(contactsPath, "utf-8");
   return JSON.parse(data);
 };
+
+module.exports = { listContacts };
