@@ -18,7 +18,7 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "list":
       const contactList = await contacts.listContacts();
       return console.log(contactList);
-
+    /*
     case "get":
       const contact = contacts.getContactById(id);
       return console.log(contact);
@@ -30,7 +30,7 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "remove":
       // ... id
       break;
-
+*/
     default:
       console.warn("\x1B[31m Unknown action type!");
   }
