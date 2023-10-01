@@ -11,7 +11,7 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-const { listContacts } = require("./db");
+const { listContacts, getContactById } = require("./db");
 
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
@@ -36,4 +36,4 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-invokeAction(/*argv*/ { action: "list", id: "AeHIrLTr6JkxGE6SN-0Rw" });
+invokeAction(/*argv*/ { action: "get", id: "AeHIrLTr6JkxGE6SN-0Rw" });
