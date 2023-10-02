@@ -12,7 +12,8 @@ const listContacts = async () => {
 
 const getContactById = async (id) => {
   const contacts = await listContacts();
-  return contacts.find((contact) => contact.id === id);
+  const result = contacts.find((contact) => contact.id === id);
+  return result || null;
 };
 
 module.exports = { listContacts, getContactById };
