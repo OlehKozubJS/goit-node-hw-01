@@ -22,9 +22,9 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "get":
       const contact = await getContactById(id);
       return console.log(contact);
-    /*
+    
     case "add":
-      // ... name email phone
+      await addContact(name, email, phone);
       break;
 
     case "remove":
