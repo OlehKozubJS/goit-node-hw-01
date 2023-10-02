@@ -35,4 +35,11 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-invokeAction(/*argv*/ { action: "get", id: "AeHIrLTr6JkxGE6SN-0Rw" });
+invokeAction(
+  /*argv*/ {
+    action: "add",
+    name: "Oleh Kozub",
+    email: "oleg.kozub54@gmail.com",
+    phone: "(099) 243-1163",
+  }
+);
