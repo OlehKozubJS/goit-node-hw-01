@@ -17,6 +17,13 @@ const getContactById = async (id) => {
   return result || null;
 };
 
-const addContact = async (name, email, phone) => {};
+const addContact = async (name, email, phone) => {
+  const newContact = {
+    id: nanoid(),
+    name: name,
+    email: email,
+    phone: phone,
+  };
+};
 
 module.exports = { listContacts, getContactById, addContact };
