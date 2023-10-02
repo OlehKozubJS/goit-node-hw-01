@@ -18,7 +18,7 @@ const getContactById = async (id) => {
 };
 
 const addContact = async (name, email, phone) => {
-  const contacts = await listContacts();
+  let contacts = await listContacts();
   const newContact = {
     id: nanoid(),
     name: name,
@@ -29,5 +29,4 @@ const addContact = async (name, email, phone) => {
   await writeFile(contactsPath, JSON.stringify(contacts, null, 2));
   return newContact;
 };
-
 module.exports = { listContacts, getContactById, addContact };
