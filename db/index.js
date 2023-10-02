@@ -25,7 +25,7 @@ const addContact = async (name, email, phone) => {
     email: email,
     phone: phone,
   };
-  contacts.push(newContact);
+  contacts = [...contacts, newContact];
   await writeFile(contactsPath, JSON.stringify(contacts, null, 2));
   return newContact;
 };
