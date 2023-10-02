@@ -18,12 +18,14 @@ const getContactById = async (id) => {
 };
 
 const addContact = async (name, email, phone) => {
+  const contacts = await listContacts();
   const newContact = {
     id: nanoid(),
     name: name,
     email: email,
     phone: phone,
   };
+  contacts.push(newContact);
 };
 
 module.exports = { listContacts, getContactById, addContact };
