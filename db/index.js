@@ -16,4 +16,6 @@ const getContactById = async (id) => {
   return result || null;
 };
 
+const addContact = async (name, email, phone) => {};
+
 module.exports = { listContacts, getContactById };
