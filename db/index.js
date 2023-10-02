@@ -18,4 +18,4 @@ const getContactById = async (id) => {
 
 const addContact = async (name, email, phone) => {};
 
-module.exports = { listContacts, getContactById };
+module.exports = { listContacts, getContactById, addContact };
