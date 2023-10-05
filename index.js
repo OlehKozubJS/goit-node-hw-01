@@ -16,6 +16,7 @@ const {
   getContactById,
   addContact,
   updateContactById,
+  deleteContactById,
 } = require("./db");
 
 async function invokeAction({ action, id, name, email, phone }) {
@@ -31,12 +32,15 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "add":
       const newContact = await addContact({ name, email, phone });
       return console.log(newContact);
+
     case "update":
       const updateContact = await updateContactById(id, { name, email, phone });
       return console.log(updateContact);
+
     case "remove":
-      const deleteContact = await deleteById(id);
+      const deleteContact = await deleteContactById(id);
       return console.log(deleteContact);
+
     default:
       console.warn("\x1B[31m Unknown action type!");
   }
