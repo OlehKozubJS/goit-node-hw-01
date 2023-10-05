@@ -61,4 +61,5 @@ module.exports = {
   getContactById,
   addContact,
   updateContactById,
+  deleteContactById,
 };
