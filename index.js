@@ -11,7 +11,12 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-const { listContacts, getContactById, addContact } = require("./db");
+const {
+  listContacts,
+  getContactById,
+  addContact,
+  updateContactById,
+} = require("./db");
 
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
@@ -26,6 +31,8 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "add":
       const newContact = await addContact({ name, email, phone });
       return console.log(newContact);
+    case "updateById":
+      const updateContact = await updateContactById(id, { name, email, phone });
     /*
     case "remove":
       // ... id
