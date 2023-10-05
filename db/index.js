@@ -6,6 +6,10 @@ const { readFile, writeFile } = fs;
 
 const contactsPath = path.resolve("db", "contacts.json");
 
+const updateContact = (contacts) => {
+  writeFile(contactsPath, JSON.stringify(contacts, null, 2));
+};
+
 const listContacts = async () => {
   const data = await readFile(contactsPath);
   return JSON.parse(data);
@@ -26,7 +30,7 @@ const addContact = async ({ name, email, phone }) => {
     phone,
   };
   contacts.push(newContact);
-  await writeFile(contactsPath, JSON.stringify(contacts, null, 2));
+  updateContact(contacts);
   return newContact;
 };
 
@@ -37,8 +41,8 @@ const updateContactById = async (id, { name, email, phone }) => {
     return null;
   }
   contacts[index] = { id, name, email, phone };
-  await writeFile(contactsPath, JSON.stringify(contacts, null, 2));
-  return newContact;
+  updateContact(contacts);
+  return contacts[index];
 };
 
 module.exports = {
