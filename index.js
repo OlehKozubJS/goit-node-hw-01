@@ -48,7 +48,7 @@ async function invokeAction({ action, id, name, email, phone }) {
 
 invokeAction(
   /*argv*/ {
-    action: "updateById",
+    action: "deleteById",
     id: "AeHIrLTr6JkxGE6SN-0Rw",
     name: "Oleh Kozub",
     email: "oleg.kozub54@gmail.com",
