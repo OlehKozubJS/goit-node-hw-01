@@ -31,13 +31,12 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "add":
       const newContact = await addContact({ name, email, phone });
       return console.log(newContact);
-    case "updateById":
+    case "update":
       const updateContact = await updateContactById(id, { name, email, phone });
-    /*
+      return console.log(updateContact);
     case "remove":
-      // ... id
-      break;
-*/
+      const deleteContact = await deleteById(id);
+      return console.log(deleteContact);
     default:
       console.warn("\x1B[31m Unknown action type!");
   }
@@ -45,7 +44,7 @@ async function invokeAction({ action, id, name, email, phone }) {
 
 invokeAction(
   /*argv*/ {
-    action: "add",
+    action: "updateById",
     id: "AeHIrLTr6JkxGE6SN-0Rw",
     name: "Oleh Kozub",
     email: "oleg.kozub54@gmail.com",
