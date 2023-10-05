@@ -45,6 +45,17 @@ const updateContactById = async (id, { name, email, phone }) => {
   return contacts[index];
 };
 
+const deleteContactById = async (id) => {
+  let contacts = await listContacts();
+  const index = contacts.findIndex((contact) => contact.id === id);
+  if (index === -1) {
+    return null;
+  }
+  const [result] = contacts.splice(index, 1);
+  updateContact(contacts);
+  return result;
+};
+
 module.exports = {
   listContacts,
   getContactById,
