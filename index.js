@@ -46,12 +46,4 @@ async function invokeAction({ action, id, name, email, phone }) {
   }
 }
 
-invokeAction(
-  /*argv*/ {
-    action: "list",
-    id: "AeHIrLTr6JkxGE6SN-0Rw",
-    name: "Oleh Kozub",
-    email: "oleg.kozub54@gmail.com",
-    phone: "(099) 243-1163",
-  }
-);
+invokeAction(argv);
