@@ -1,3 +1,3 @@
-const { resolve } = require("path");
+const contacts = require("./contacts.json");
 
-const contactsPath = resolve("db", "contacts.json");
+module.exports = contacts;
