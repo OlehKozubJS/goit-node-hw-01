@@ -1,10 +1,8 @@
-const fs = require("fs/promises");
-const path = require("path");
+const { readFile, writeFile } = require("fs/promises");
+const { resolve } = require("path");
 const { nanoid } = require("nanoid");
 
-const { readFile, writeFile } = fs;
-
-const contactsPath = path.resolve("db", "contacts.json");
+const contactsPath = resolve("db", "contacts.json");
 
 const updateContact = (contacts) => {
   writeFile(contactsPath, JSON.stringify(contacts, null, 2));
