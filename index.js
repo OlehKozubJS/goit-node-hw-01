@@ -17,7 +17,7 @@ const {
   addContact,
   updateContactById,
   deleteContactById,
-} = require("./db");
+} = require("./contacts");
 
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
