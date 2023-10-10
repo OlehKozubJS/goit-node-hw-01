@@ -10,6 +10,7 @@ program
 program.parse(process.argv);
 
 //const argv = program.opts();
+const yargs = require("yargs");
 const { argv } = yargs(process.argv);
 console.log(argv);
 
