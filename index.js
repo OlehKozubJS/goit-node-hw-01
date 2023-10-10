@@ -48,5 +48,5 @@ async function invokeAction({ action, id, name, email, phone }) {
 
 invokeAction(argv);
 
-console.log(process.argv);
 const actionIndex = process.argv.indexOf("--action");
+console.log(process.argv);
