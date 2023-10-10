@@ -11,7 +11,7 @@ program.parse(process.argv);
 
 //const argv = program.opts();
 const yargs = require("yargs");
-const { argv } = yargs(process.argv.slice(2));
+const { argv } = yargs(process.argv.slice(0));
 console.log(argv);
 
 const {
