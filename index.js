@@ -50,6 +50,6 @@ invokeAction(argv);
 
 const actionIndex = process.argv.indexOf("--action");
 if (actionIndex !== -1) {
-  const action = process.argv();
+  const action = process.argv(actionIndex + 1);
+  console.log(action);
 }
-console.log(process.argv);
