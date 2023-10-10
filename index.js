@@ -9,10 +9,7 @@ program
 
 program.parse(process.argv);
 
-//const argv = program.opts();
-const yargs = require("yargs");
-const { argv } = yargs(process.argv.slice(0));
-console.log(argv);
+const argv = program.opts();
 
 const {
   listContacts,
@@ -50,13 +47,6 @@ async function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv);
-/*
-const actionIndex = process.argv.indexOf("--action");
-if (actionIndex !== -1) {
-  const action = process.argv(actionIndex + 1);
-  console.log(action);
-}
-*/
 
 /*
 
