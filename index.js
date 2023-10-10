@@ -9,7 +9,9 @@ program
 
 program.parse(process.argv);
 
-const argv = program.opts();
+//const argv = program.opts();
+const { argv } = yargs(process.argv);
+console.log(argv);
 
 const {
   listContacts,
